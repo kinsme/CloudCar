@@ -54,8 +54,47 @@
       <artifactId>jedis</artifactId>
       <version>2.7.3</version>
     </dependency>
+    <!--webx相关依赖-->
+    <dependency>
+      <groupId>com.alibaba.citrus</groupId>
+      <artifactId>citrus-webx-all</artifactId>
+      <version>3.2.4</version>
+    </dependency>
+    <!-- 日志及相关依赖（用slf4j+logback代替jcl+log4j） -->
+    <!-- ================================================= -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.7.5</version>
+    </dependency>
+    <!-- 将现有的jakarta commons logging的调用转换成lsf4j的调用。 -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>jcl-over-slf4j</artifactId>
+      <version>1.7.5</version>
+    </dependency>
+    <!-- Hack：确保commons-logging的jar包不被引入，否则将和jcl-over-slf4j冲突 -->
+    <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+      <version>1.1.3</version>
+      <scope>provided</scope>
+    </dependency>
+    <!-- slf4j的实现：logback，用来取代log4j。更快、更强！ -->
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.0.13</version>
+      <scope>runtime</scope>
+    </dependency>
   </dependencies>
   <build>
     <finalName>cloudcar</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.mortbay.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
   </build>
 </project>
