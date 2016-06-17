@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CloudCar.iml" filepath="$PROJECT_DIR$/CloudCar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloudcar.iml" filepath="$PROJECT_DIR$/cloudcar.iml" />
     </modules>
   </component>
 </project>
