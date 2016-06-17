@@ -15,7 +15,7 @@ public class RedisTest {
     }
     @Test
     public void testAdd(){
-        jedis.set("test","123456");
+        jedis.set("test","Bob");
     }
     @After
     public void setEnd(){
@@ -24,5 +24,9 @@ public class RedisTest {
     @Test
     public void testDel(){
         jedis.del("test");
+    }
+    @Test
+    public void testGet(){
+        System.out.println(jedis.get("test")+" "+jedis.get("age"));
     }
 }
