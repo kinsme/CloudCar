@@ -16,6 +16,7 @@ public class RedisTest {
     @Test
     public void testAdd(){
         jedis.set("test","Bob");
+        jedis.expire("test",60);
     }
     @After
     public void setEnd(){
